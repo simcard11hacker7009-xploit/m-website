@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Design</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">BrandName</div>
+
+        <!-- Controls: Theme Toggle & Mobile Hamburger -->
+        <div class="nav-controls">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#carousel">Showcase</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#contact" class="btn-nav">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in-scroll">
+        <div class="hero-content">
+            <h1>Build Your Next Big Idea</h1>
+            <p>Create stunning, modern, and responsive websites effortlessly using simple code and modern aesthetics.</p>
+            <button id="cta-btn" class="btn-primary">Click Me</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features fade-in-scroll">
+        <h2>Why Choose Us</h2>
+        <div class="card-container">
+            <div class="card fade-in-scroll">
+                <h3>⚡ Fast Performance</h3>
+                <p>Optimized structure and clean styling ensure your site loads instantly on all devices.</p>
+            </div>
+            <div class="card fade-in-scroll">
+                <h3>📱 Fully Responsive</h3>
+                <p>Looks fantastic on desktop, tablet, and mobile browsers smoothly.</p>
+            </div>
+            <div class="card fade-in-scroll">
+                <h3>🎨 Modern Design</h3>
+                <p>Designed with beautiful modern gradients, typography, and clean spacing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Carousel Section -->
+    <section id="carousel" class="carousel-section fade-in-scroll">
+        <h2>Project Showcase</h2>
+        <p class="carousel-subtitle">Explore our latest work and designs below</p>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Previous Slide">❮</button>
+
+            <div class="carousel-slider" id="carousel-slider">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="https://picsum.photos/id/1015/800/400" alt="Landscape showcase">
+                    <div class="slide-caption">Modern Design & Architecture</div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="https://picsum.photos/id/1018/800/400" alt="Nature showcase">
+                    <div class="slide-caption">Clean & Responsive UI Layouts</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="https://picsum.photos/id/1025/800/400" alt="Tech showcase">
+                    <div class="slide-caption">Fast Performance & Optimization</div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next-btn" id="next-btn" aria-label="Next Slide">❯</button>
+        </div>
+
+        <!-- Carousel Indicators/Dots -->
+        <div class="carousel-dots" id="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section fade-in-scroll">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtitle">Have questions? Send us a message below.</p>
+        
+        <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+                <small class="error-msg" id="name-error"></small>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+                <small class="error-msg" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <small class="error-msg" id="message-error"></small>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+            <div id="form-success" class="success-msg"></div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BrandName. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
